@@ -12,11 +12,9 @@ struct client_msg {
 };
 
 namespace godot {
-
     class GameNiteControlpads : public Node {
-        GDCLASS(GameNiteControlpads, Node)
-
-            private:
+        GDCLASS(GameNiteControlpads, Node);
+    private:
         struct c_string_vec new_messages;
         std::queue<client_msg> messages;
         struct c_string_vec clients;

@@ -19,10 +19,10 @@ extern "C" {
 }
 
 // control pad check
-#define CP_CHECK(x) do {                                                   \
-        uint64_t retval = (x);                                             \
-        if (retval != 0) {                                                 \
+#define CP_CHECK(x) do {                                                \
+        uint64_t retval = (x);                                          \
+        if (retval != 0) {                                              \
             fprintf(stderr, "controlpads error: %s returned %ld as %s:%d", \
-                    #x, retval, __FILE__, __LINE__);                       \
-        }                                                                  \
+                    #x, retval, __FILE__, __LINE__);                    \
+        }                                                               \
     } while (0)
