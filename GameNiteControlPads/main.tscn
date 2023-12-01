@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2irlkbqx4y3y"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_lh7pv"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_lh7pv")
+
+[node name="GameNiteControlpads" type="GameNiteControlpads" parent="."]
+
+[connection signal="message_received" from="GameNiteControlpads" to="." method="_on_game_nite_controlpads_message_received"]
